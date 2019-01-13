@@ -10,12 +10,7 @@ build
 package-lock.json
 
 ## Directories
-log/
 node_modules/
 
 
-## Files
-result.xml
-npm-debug.log
-*.mp4
 
