@@ -5,6 +5,7 @@
   "author": "Wuyun",
   "license": "MIT",
   "homepage": "https://github.com/includeleec/tron-youtube-donate",
+  "engines" : { "node" : "10.13.0" },
   "scripts": {
     "dev": "cross-env NODE_ENV=dev webpack-dev-server --progress --mode development --config webpack.config.dev.js",
     "build": "webpack -p --progress --mode production --config webpack.config.build.js"
