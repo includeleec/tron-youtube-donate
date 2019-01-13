@@ -1,7 +1,5 @@
 import React from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
-import styled from 'styled-components';
-import {message} from 'antd';
 import Home from 'containers/Home';
 import Donate from 'containers/Donate';
 import Notifications from 'containers/Notification';
@@ -32,8 +30,6 @@ class RootRouter extends React.Component {
             featured: []
         }
     }
-    // this.onMessageEdit = this.onMessageEdit.bind(this);
-    // this.onMessageTip = this.onMessageTip.bind(this);
   }
 
   async componentDidMount() {
@@ -101,9 +97,6 @@ class RootRouter extends React.Component {
       });
 
       if(!this.state.tronWeb.loggedIn) {
-          // Set default address (foundation address) used for contract calls
-          // Directly overwrites the address object as TronLink disabled the
-          // function call
 
           window.tronWeb.on('addressChanged', () => {
               if(this.state.tronWeb.loggedIn)
@@ -119,7 +112,6 @@ class RootRouter extends React.Component {
       }
 
       await Utils.setTronWeb(window.tronWeb);
-      // console.log(Utils.contract);
       
       this.startEventListener()
       
@@ -138,12 +130,9 @@ class RootRouter extends React.Component {
           event.emit('NewDonation', result);
 
         }
-        // this.fetchMessage(+result.id);
     });
 
-
   }
-
 
   render () {
     return (

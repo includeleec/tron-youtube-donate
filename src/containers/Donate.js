@@ -4,6 +4,7 @@ import { findGetParameter } from 'utils/util';
 import Utils from 'utils';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
+import { event } from 'utils/event';
 import TronLogoSmall from 'assets/images/tron-small.png'
 
 const FormItem = Form.Item;
@@ -68,6 +69,7 @@ class DonateForm extends React.Component {
   }
 
   msgShow(result) {
+    console.log('msgShow', result)
     message.success(<span> View transaction result on <a href={`${TRONSCAN_URL}#/transaction/${result.transaction}`}>Tronscan</a></span>, 8);
   }
     
@@ -133,7 +135,7 @@ class DonateForm extends React.Component {
                 )}
               </FormItem>
               <FormItem>
-                <Button type="primary" block="true" htmlType="submit" className="login-form-button">
+                <Button type="primary" block={true} htmlType="submit" className="login-form-button">
                   Donate
                 </Button>
               </FormItem>

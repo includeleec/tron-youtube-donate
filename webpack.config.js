@@ -41,11 +41,9 @@ module.exports = {
             VERSION: JSON.stringify(packageJSON.version),
             GIT_HOMEPAGE: JSON.stringify(packageJSON.homepage),
             
-            // WEB3_PROVIDER_URL: JSON.stringify('wss://ropsten.infura.io/_ws'),
             NETWORK_VERSION: JSON.stringify('shasta'),
             NETWORK_NAME: JSON.stringify('Shasta Testnet'),
-            CONTRACT_ADDRESS: JSON.stringify('TJbQXPvoBEheG2vyWu9f4UfzB7AmW4jLxx'),  //TWiWt5SEDzaEqS6kE5gandWMNfxR2B5xzg
-            // CONTRACT_ADDRESS: "TG2g9CjfdeUgZo8D7jEVmqWiEggpbhrBSD",
+            CONTRACT_ADDRESS: JSON.stringify('TJbQXPvoBEheG2vyWu9f4UfzB7AmW4jLxx'),
             PRIVATE_KEY:JSON.stringify("08ec350a7e5d0e557b536c1523331724029627519e5fce198f3388efa9b60f51"),
             TRONSCAN_URL: JSON.stringify('https://shasta.tronscan.org/'),
             TRONGRID_API: JSON.stringify("https://api.trongrid.io")

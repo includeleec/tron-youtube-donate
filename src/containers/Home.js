@@ -220,48 +220,7 @@ class Home extends React.Component {
         </Divider>
 
         <Card className = "HomepageSubCard" style = {{margin: '20px 0'}}  title= { "Source Code" }>
-          {/* <Timeline>
-            <Timeline.Item color="green">
-              <div>Streamer enters wallet address and generates 3 unique links </div>
-              <div> [<Link to = {this.state.donatelink}><span className="red"> Donate</span></Link>] Customized donation page for the streamer</div>
-              <div> [<Link to = {this.state.notilink}><span className="blue"> Notification</span></Link>] The donations' notifications will show on this page </div>
-              <div> [<Link to = {this.state.historylink}><span className="yellow"> History</span></Link>] The donate history will show on this page </div>
-            </Timeline.Item>
-            <Timeline.Item color="green">
-              <div>Streamer shares<Link to = {this.state.donatelink}> <span className="red">Donate link</span></Link> to its viewers</div>
-            </Timeline.Item>
-            <Timeline.Item color="green">
-              <div>Streamer setups browser source for streaming with the<Link to = {this.state.notilink}> <span className="blue"> Notification link </span></Link></div>
-            </Timeline.Item>
-            <Timeline.Item color="red">
-              <div>Viewers donate to the streamer through the <Link to = {this.state.donatelink}><span className="red">Donate page</span></Link></div>
-              <div>(<a href="https://chrome.google.com/webstore/detail/tronlink/ibnejdfjmmkpcnlpebklmnkoeoihofec" target="_blank"></a> TronLink is required)</div>
-            </Timeline.Item>
-            <Timeline.Item>
-              <div>
-                <span style={{marginRight: '5px'}}>
-                  The donate messages will show on the  <Link to = {this.state.notilink}><span className="blue">Notification page</span></Link>, and displays on the stream 
-                </span>
-                
-                <Tag color="blue" onClick={this.showDemo}>Demo</Tag>
-                <Modal
-                  className = 'demoModal'
-                  title="Notification here"
-                  visible={this.state.demovisible}
-                  onCancel={this.hideDemo}
-                  footer = {null}
-                >
-                <video controls width ="100%">
-                  <source src="assets/images/demo.mp4" type="video/mp4"/>
-                </video>
-                </Modal>
-              </div>
-            </Timeline.Item>
-            <Timeline.Item color='#F57F17'>
-              <div>Streamer checks the top donors and donate records at the <Link to = {this.state.historylink}><span className="yellow">History page</span></Link></div>
-            </Timeline.Item>
-          </Timeline> */}
-          {/* <Divider/> */}
+          
           <div style={{display: 'flex',justifyContent: 'center'}}>
             <ReferenceCols>
               <a href={`${TRONSCAN_URL}/#/contract/${CONTRACT_ADDRESS}`} target='_blank'>
