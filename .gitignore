@@ -11,11 +11,7 @@ package-lock.json
 
 ## Directories
 log/
-dist/
 node_modules/
-bower_components/
-tmp/
-firebase/
 
 
 ## Files
