@@ -1,0 +1,39 @@
+$gold: gold;
+$silver:  #D3D3D3;
+$bronze: #cd7f32;
+
+.donateRecords {
+    .donateRecord{
+        &:nth-child(1) {
+            .donateRecordAvatar{
+                background-color: $gold;
+            }
+        }
+        &:nth-child(2) {
+            .donateRecordAvatar{
+                background-color: $silver;
+            }
+        }
+        &:nth-child(3) {
+            .donateRecordAvatar{
+                background-color: $bronze;
+            }
+        }
+
+        & .ant-list-item-meta-title {
+            font-size: 17px;
+        }
+
+        & .donatedValue {
+            font-size: 16px;
+            color:#666;
+        }
+    }
+
+    padding: 10px;
+    
+}
+
+.ant-row-flex-middle {
+    align-items: baseline;
+}
