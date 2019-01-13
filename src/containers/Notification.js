@@ -85,9 +85,6 @@ class NotiPage extends React.Component {
 		},3000)
 	}
 	
-	componentWillUnmount() {
-		event.off('NewDonation', this.valueChange);
-	}
 
 	valueChange = result => {
 		console.log('valueChange', result.result);

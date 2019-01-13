@@ -75,6 +75,7 @@ class Home extends React.Component {
         liveId = liveurl.split('/')[3];
       }
       this.updateAddrLinks(addr, liveId);
+
     }
 
   }
@@ -83,12 +84,39 @@ class Home extends React.Component {
     let liveurl = event.target.value;
     cookies.set('liveurl', liveurl, {path:'/', maxAge:603400 });
     this.setState({ liveurl });
+
+    this.changeLink();
   }
 
   updateInputValue = (event) => {
     let addr = event.target.value;
     this.updateAddrLinks(addr);
   } 
+
+  changeLink() {
+    let addr = cookies.get('addr');
+    let liveurl = cookies.get('liveurl');
+
+    let liveId = ''
+    if(liveurl) {
+      liveId = liveurl.split('/')[3];
+    }
+
+    let liveAppend = liveId ? '&liveId='+liveId : '';
+
+    let query = '?addr=' + addr + liveAppend;
+    let donatelink =  'donate'+query;
+    let notilink = 'noti' + query;
+    let historylink = 'history' + query;
+
+    if(liveId) {
+      this.setState({addr: addr, donatelink: donatelink,notilink: notilink, historylink : historylink , liveurl:'https://youtu.be/'+liveId})
+
+    } else {
+      this.setState({addr: addr, donatelink: donatelink,notilink: notilink, historylink : historylink })
+    }
+
+  }
 
   updateAddrLinks = (addr, liveId='') => {
 
@@ -104,6 +132,7 @@ class Home extends React.Component {
     } else {
       this.setState({addr: addr, donatelink: donatelink,notilink: notilink, historylink : historylink })
     }
+
   }
 
   showDemo = (e) => {
