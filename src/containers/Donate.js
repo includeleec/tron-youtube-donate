@@ -59,7 +59,7 @@ class DonateForm extends React.Component {
     Utils.contract.donate(values.daddr, values.ddonor, values.dmssg).send(donateTransactionOptions,(error, result)=> {
       if (!error) {
         // console.log(result);
-        event.on('NewDonation', this.msgShow);
+        event.on('NewDonationInMsg', this.msgShow);
         console.log('r', result)
       } else {
         console.log('e', error)

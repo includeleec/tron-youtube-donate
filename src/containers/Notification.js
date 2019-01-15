@@ -73,7 +73,7 @@ class NotiPage extends React.Component {
 		let liveuId = findGetParameter('liveId');
 		setTimeout( () => { this.setState({isBlank: true })}, 3000);
 		
-		event.on('NewDonation', this.valueChange);
+		event.on('NewDonationInModal', this.valueChange);
 		
 		this.setState({
 			showYoutube: true,
@@ -104,7 +104,6 @@ class NotiPage extends React.Component {
 			donateMssg: result.result.message,
 			donateValue: +parseFloat(Utils.tronWeb.fromSun(result.result.value )).toFixed(7)
 		});
-
 
 		setTimeout( () => { this.setState({donationAlert: false })}, 5000);
 	}

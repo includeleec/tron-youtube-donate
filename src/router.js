@@ -127,7 +127,8 @@ class RootRouter extends React.Component {
         } else {
           console.log('Detected new NewDonation:', result); // result.transaction
           // emit event in Notification page
-          event.emit('NewDonation', result);
+          event.emit('NewDonationInMsg', result);
+          event.emit('NewDonationInModal', result);
 
         }
     });
