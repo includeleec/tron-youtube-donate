@@ -6,6 +6,6 @@ app.use(express.static(path.join(__dirname, 'dist')));
 
 app.get('/hello', (req, res) => res.send('Hello World!'));
 
-app.set('port', process.env.PORT || 80);
+app.set('port', process.env.PORT || 3000);
 
 app.listen(app.get('port'))
